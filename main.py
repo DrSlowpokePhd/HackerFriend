@@ -8,7 +8,7 @@ sc = SlackClient(slack_token)
 info = sc.api_call(
     "channels.history",
     channel='C9S7YCHJS',
-    count=1000
+    count=100
 )
 object = open('team_history.json', 'w')
 object.write(json.dumps(info, sort_keys = True, indent = 4))#str(info))
